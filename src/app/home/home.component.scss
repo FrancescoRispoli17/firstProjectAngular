@@ -1,0 +1,18 @@
+@use "../../styles" as *;
+.day{
+    border-color: $main-color !important;
+}
+
+.selected{
+    background-color: rgb(181, 57, 185);
+}
+
+.shows{
+    img{
+        width: 240px;
+    }
+    a{
+        text-decoration: none;
+        background-color: $main-color !important;
+    }
+}

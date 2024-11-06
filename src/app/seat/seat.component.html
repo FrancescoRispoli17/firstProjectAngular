@@ -1,0 +1,30 @@
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-4">
+            <img src="{{results.thumb}}" alt="{{results.title}}" class="w-100">
+        </div>
+        <div class="col-8">
+            <h1>{{results.title}}</h1>
+            <p><span class="fw-bold">Description:</span> {{results.description}}</p>
+            <p><span class="fw-bold">Director:</span> {{results.director}}</p>
+            <p> <span class="fw-bold">Country:</span> {{results.country}}</p>
+            <p> <span class="fw-bold">Duration:</span> {{results.duration}}</p>
+        </div>
+    </div>
+    <div class="row rounded-4 mt-5 py-3" style="background-color: rgb(68, 22, 110);">
+        <div class="col-12 text-center">
+            <p class="fs-3 m-0">Room: {{results.number}}</p>
+            <p class="fs-4">{{ results.day | date: 'EEEE' }} {{ results.day }} hour {{ formatTime(results.time) }} </p>
+            <div class="screen mb-5">SCREEN</div>
+        </div>
+        <div class="col-auto mx-auto text-center ">
+            <div *ngFor="let line of createArray(results.lines); let c = index">
+                <div class="d-inline-block letter">{{ getLetter(c) }}</div>
+                <button *ngFor="let seat of createArray(results.seats); let i = index" class="seat"
+                    [ngClass]="{ 'reserved': this.reserved.includes(getLetter(c) + (i+1)),'reserve':this.reserve.includes(getLetter(c) + (i+1)) }"
+                    (click)="addToReserve(getLetter(c), i)"></button>
+            </div>
+            <button class="reserveBtn" *ngIf="reserve.length > 0" (click)="sendReservation()">Reserve</button>
+        </div>
+    </div>
+</div>
