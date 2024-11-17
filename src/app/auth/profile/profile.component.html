@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <h1>Hi {{user.name}}</h1>
+        <div class="col-12">
+            <div class="mt-5 w-auto d-inline-block p-3" style="background-color: rgb(68, 22, 110);">
+                <h5>Account detail</h5>
+                <p>Email: {{user.email}}</p>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="mt-5 p-3" style="background-color: rgb(68, 22, 110);">
+                <h5>Reservations detail</h5>
+                <table class="table w-100">
+                    <thead>
+                      <tr>
+                        <th scope="col">title</th>
+                        <th scope="col">date</th>
+                        <th scope="col">time</th>
+                        <th scope="col">room</th>
+                        <th scope="col">seats</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor=" let movie of user.reservations ">
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.date}}</td>
+                        <td>{{movie.time}}</td>
+                        <td>{{movie.room}}</td>
+                        <td>{{movie.reservation}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div> 
+        </div>
+    </div>
+</div>

@@ -16,3 +16,24 @@
         background-color: $main-color !important;
     }
 }
+.row{
+    transition: transform 0.3s ease;
+}
+.prev{
+    position: absolute;
+    top: 20px;
+    left: -60px;
+    width: 40px;
+}
+.next{
+    position: absolute;
+    top: 20px;
+    right: -60px;
+    width: 40px;
+}
+
+.ad{
+    width: 100% !important;
+    max-height: 450px;
+    object-fit: cover !important;
+}

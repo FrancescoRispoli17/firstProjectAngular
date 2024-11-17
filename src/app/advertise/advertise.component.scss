@@ -1,0 +1,27 @@
+.ad{
+    width: 100% !important;
+    max-height: 450px;
+    object-fit: cover !important;
+  }
+  .ad-L{
+    width: 480px;
+    position:absolute;
+    left: 100px;
+    top: 640px;
+    img{
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+  .ad-R{
+    width: 480px;
+    position:absolute;
+    right: 100px;
+    top: 640px;
+    img{
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }

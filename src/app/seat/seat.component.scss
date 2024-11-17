@@ -1,6 +1,5 @@
 @use "../../styles" as *;
 .screen{
-    width: 50%;
     height: 25px;
     background-color: rgb(77, 75, 75);
     margin: 0 auto;
@@ -20,11 +19,11 @@
         border-bottom-right-radius: 10px;
     }
     .reserved{
-        background-color: rgb(71, 69, 69);
+        background-color: rgb(206, 92, 92);
         pointer-events: none;
     }
     .reserve{
-        background-color: rgb(138, 132, 132);
+        background-color: rgb(54, 223, 82);
     }
     .reserveBtn{
         border: none;
